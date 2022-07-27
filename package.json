@@ -1,0 +1,49 @@
+{
+  "name": "mini-app-engines",
+  "title": "Mini App Engines",
+  "version": "0.0.3",
+  "description": "TODO",
+  "main": "index.js",
+  "files": [
+    "README.md",
+    "android",
+    "index.js",
+    "ios",
+    "mini-app-engines.podspec"
+  ],
+  "homepage": "https://github.com/dagouzhi/mini-app-engines",
+  "scripts": {
+    "build": "rimraf -fr build && npm run build:android && npm run build:ios",
+    "build:android": "rimraf -fr build/host && flutter build aar && node ./build.android.js",
+    "build:ios": "rimraf -fr build/ios && flutter build ios-framework --cocoapods && node ./build.ios.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dagouzhi/mini-app-engines.git",
+    "baseUrl": "https://github.com/dagouzhi/mini-app-engines"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "yourname@email.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": ">=16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "archiver": "^5.3.1",
+    "find-remove": "^4.0.4",
+    "fs-extra": "^10.1.0",
+    "react": "^16.9.0",
+    "react-native": "^0.61.5",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {}
+}
