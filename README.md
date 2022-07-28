@@ -115,3 +115,12 @@ MiniAppEngines.openApplet(
  
   > 暂进使用的是 [kraken](https://github.com/openkraken/kraken) 支持 flutter 2.8.0 ~ 2.8.1
   > 后续跟进 [webf](https://github.com/openwebf/webf) 支持 flutter 3.0
+## 视频演示 
+
+> [B站演示](https://www.bilibili.com/video/BV1eg41117YR/)
+## demo react
+![alt react](./docs/images/react.jpeg)
+## demo vue
+![alt vue](./docs/images/vue.jpeg)
+## demo vue
+![alt rax](./docs/images/rax.jpeg)
