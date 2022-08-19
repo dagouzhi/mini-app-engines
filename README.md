@@ -1,12 +1,12 @@
 # mini-app-engines
 
-在`react native`中调用`flutter`和[`kraken`](https://openkraken.com/)（后期换`webf`）做小程序容器
+在`react native`中调用`flutter`和[`webf`](https://github.com/openwebf/webf)做小程序容器
 
 ## Getting started
 
 `$ npm install mini-app-engines --save`
 
-### 进入`node_modules/mini-app-engines` 去行下 `npm run build` 打包flutter资源
+### 进入`node_modules/mini-app-engines` 去行下 `npm run build` 打包flutter(`3.0.5`)资源
 
 ## 手动配置
 
@@ -111,10 +111,9 @@ MiniAppEngines.openApplet(
 
 ```
 
-## 注意暂时只支持 `Flutter 2.8.1`、
+## 注意暂时只支持 `Flutter 3.0.5`、
  
-  > 暂进使用的是 [kraken](https://github.com/openkraken/kraken) 支持 flutter 2.8.0 ~ 2.8.1
-  > 后续跟进 [webf](https://github.com/openwebf/webf) 支持 flutter 3.0
+  >  [webf](https://github.com/openwebf/webf) 支持 flutter 3.0
 ## 视频演示 
 
 > [B站演示](https://www.bilibili.com/video/BV1eg41117YR/)

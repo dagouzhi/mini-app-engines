@@ -5,19 +5,11 @@ import 'dart:io';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:kraken/css.dart';
-import 'package:kraken/kraken.dart';
+import 'package:webf/css.dart';
+import 'package:webf/webf.dart';
 // import 'package:kraken/devtools.dart';
-import 'package:kraken_websocket/kraken_websocket.dart';
-import 'package:kraken_animation_player/kraken_animation_player.dart';
-import 'package:kraken_webview/kraken_webview.dart';
-import 'package:kraken_video_player/kraken_video_player.dart';
 
 void main() {
-  KrakenWebsocket.initialize();
-  KrakenAnimationPlayer.initialize();
-  KrakenWebView.initialize();
-  KrakenVideoPlayer.initialize();
   runApp(MyApp());
 }
 
@@ -62,7 +54,7 @@ class _MyHomePageState extends State<MyBrowser> {
   final MethodChannel _channel_1 = const MethodChannel('__native2flutter__');
   final TextEditingController textEditingController =
       TextEditingController(text: '');
-  Kraken? _kraken;
+  WebF? _webF;
   @override
   void initState() {
     _channel_1.setMethodCallHandler((call) {
@@ -95,12 +87,12 @@ class _MyHomePageState extends State<MyBrowser> {
     return Scaffold(
         body: _url.isNotEmpty
             ? Center(
-                child: _kraken = Kraken(
+                child: _webF = WebF(
                 background: Colors.white,
                 // devToolsService: ChromeDevToolsService(),
                 viewportWidth: viewportSize.width,
                 viewportHeight: viewportSize.height,
-                bundle: KrakenBundle.fromUrl(_url),
+                bundle: WebFBundle.fromUrl(_url),
               ))
             : const Center(
                 child: Text('loading'),

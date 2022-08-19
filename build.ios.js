@@ -5,12 +5,12 @@ const archiver = require('archiver');
 
 const quickjsPath = path.join(
   __dirname,
-  './packages/kraken-0.11.0/ios/quickjs.xcframework',
+  './packages/webf-0.12.0+1/ios/quickjs.xcframework',
 );
 
-const krakenBridgePath = path.join(
+const webfBridgePath = path.join(
   __dirname,
-  './packages/kraken-0.11.0/ios/kraken_bridge.xcframework',
+  './packages/webf-0.12.0+1/ios/webf_bridge.xcframework',
 );
 
 const types = ['Debug', 'Release', 'Profile'];
@@ -30,11 +30,11 @@ function zipAssets(type) {
       `./assets/ios/framework/${type}/quickjs.xcframework`,
     );
     fs.copySync(quickjsPath, quickjsSavePath);
-    const krakenBridgeSavePath = path.join(
+    const webfBridgeSavePath = path.join(
       __dirname,
-      `./assets/ios/framework/${type}/kraken_bridge.xcframework`,
+      `./assets/ios/framework/${type}/webf_bridge.xcframework`,
     );
-    fs.copySync(krakenBridgePath, krakenBridgeSavePath);
+    fs.copySync(webfBridgePath, webfBridgeSavePath);
     const output = fs.createWriteStream(
       path.join(__dirname, `./assets/ios/framework/${type}.zip`),
     );
