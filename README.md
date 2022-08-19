@@ -68,7 +68,7 @@ end
  repositories {
     // 添加这个
     maven {
-        url "$rootDir/../node_modules/mini-app-engines/build/host/outputs/repo"
+        url "$rootDir/../node_modules/mini-app-engines/assets/android/repo"
     } 
     // 添加这个
     maven {
